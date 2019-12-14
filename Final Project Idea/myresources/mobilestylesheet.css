@@ -1,0 +1,22 @@
+body {
+    background-color:red;
+}
+
+.logoTitle{
+  font-size: 30pt;
+  color: 272759;
+  text-align: center;
+  margin-top: 30px;
+  border-color: white;
+  border-width: thick;
+
+}
+
+h4 {
+  color: 272759;
+  text-align: center;
+}
+
+#result{
+  font-size: 18pt;
+}

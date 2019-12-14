@@ -1,0 +1,85 @@
+extends layout
+
+block content
+    head
+        title Final Project Index
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        script(type='text/javascript' src='/resource/ajax_final.js')
+        link(rel='stylesheet', href='/resource/indexstylesheet.css')
+
+    body
+      div.headingLogo
+        .container
+          .row(justify-content-md-center)
+            .col-8
+              h1.logoTitle Spring 2020 Course Lookup
+            .col-4
+              div.logoPicture
+              img(src="https://www.stjohns.edu/themes/sju_theme/assets/logos/logo-header-desktop.svg?raw=true" height="100" width="200")
+
+      div
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          h4 Search Based on Criteria Below
+          span.label Search by Course Code or Prefix:
+          form#qcodeform
+            div
+              div
+                input#qcode(type="text", name="qcode")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Course Title:
+          form#qtitleform
+            div
+              div
+                input#qtitle(type="text", name="qtitle")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Instructor:
+          form#qinstructorform
+            div
+              div
+                input#qinstructor(type="text", name="qinstructor")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Meeting Day: (m, t, w, r, f,)
+          form#qdayform
+            div
+              div
+                input#qday(type="text", name="qday")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Course Type: (Hybrid, Lecture, Lab, Internship)
+          form#qtypeform
+            div
+              div
+                input#qtype(type="text", name="qtype")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Course Seat Availability: (Will only return seats > 0)
+          form#qseatsform
+            div
+              div
+                input#qseats(type="text", name="qseats")
+              div
+              input(type="submit", value="submit")
+          br
+          span.label Search by Instructor and Course Code:
+          form#qcomboform
+            div
+              div
+                input#qcomboinstructor(type="text", name="qcomboinstructor")
+                input#qcombocode(type="text", name="qcombocode")
+              div
+              input(type="submit", value="submit")
+
+        .col-md-6.col-sm-6.col-xs-12
+          h4 Search Results
+          br
+          .jumbotron
+            div#result
